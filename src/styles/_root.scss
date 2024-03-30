@@ -1,0 +1,50 @@
+:root {
+  // Font size
+  --fs-10xl: 8.4rem;
+  --fs-6xl: 7.2rem;
+  --fs-4xl: 6rem;
+  --fs-3xl: 4.8rem;
+  --fs-2xl: 3.6rem;
+  --fs-xl: 2rem;
+  --fs-lg: 2.4rem;
+  --fs-md: 1.8rem;
+  --fs-base: 1.6rem;
+  --fs-sm: 1.4rem;
+  --fs-xs: 1.2rem;
+
+  // Font weight
+  --fw-extra-bold: 900;
+  --fw-bold: 700;
+  --fw-md: 500;
+  --fw-base: 400;
+  --fw-thin: 300;
+
+  // Color
+  --color-white: #ffffff;
+  --color-light: #f5f7fa;
+  --color-gray: #d0d5dd;
+  --color-black: #1a1a1a;
+  --color-dark: #282d31;
+  --color-dark-gray: #2d2d2d;
+  --color-dark-blue: #101828;
+  --color-primary: #616e7c;
+  --color-secondary: #323f4b;
+  --color-danger: #f84141;
+  --color-success: #32d583;
+  --color-warning: #ffd25e;
+  --color-info: #5d94ff;
+
+  --color-shade-t1: #616e7c;
+  --color-shade-t2: #52606d;
+  --color-shade-t3: #3e4c59;
+  --color-shade-t4: #323f4b;
+  --color-shade-t5: #1f2933;
+
+  --color-tint-t1: #7b8794;
+  --color-tint-t2: #9aa5b1;
+  --color-tint-t3: #cbd2d9;
+  --color-tint-t4: #e4e7eb;
+  --color-tint-t5: #f5f7fa;
+
+  --border-input: #d1d1d1;
+}

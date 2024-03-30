@@ -1,0 +1,19 @@
+.gap {
+  width: 100%;
+
+  &__sm {
+    height: rem(8px);
+  }
+
+  &__base {
+    height: rem(16px);
+  }
+
+  &__md {
+    height: rem(24px);
+  }
+
+  &__lg {
+    height: rem(32px);
+  }
+}

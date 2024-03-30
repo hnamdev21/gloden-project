@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+  background-color: var(--color-light);
+}

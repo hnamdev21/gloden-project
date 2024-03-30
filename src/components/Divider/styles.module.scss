@@ -1,0 +1,28 @@
+.divider {
+  border-top: rem(1px) solid var(--color-gray);
+  margin: rem(20px) 0;
+
+  &__with_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include text-base;
+    color: var(--color-dark);
+    margin: rem(20px) 0;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      border-top: rem(1px) solid var(--color-gray);
+    }
+
+    &::before {
+      margin-right: rem(20px);
+    }
+
+    &::after {
+      margin-left: rem(20px);
+    }
+  }
+}

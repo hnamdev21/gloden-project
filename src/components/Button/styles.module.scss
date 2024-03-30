@@ -1,0 +1,121 @@
+.text {
+  @include text;
+}
+
+.button {
+  &__contained {
+    &__primary {
+      background-color: var(--color-primary);
+    }
+
+    &__secondary {
+      background-color: var(--color-secondary);
+    }
+
+    &__danger {
+      background-color: var(--color-danger);
+    }
+
+    &__success {
+      background-color: var(--color-success);
+    }
+
+    &__warning {
+      background-color: var(--color-warning);
+    }
+
+    &__info {
+      background-color: var(--color-info);
+    }
+  }
+
+  &__outlined {
+    &__primary {
+      border: rem(1px) solid var(--color-primary);
+    }
+
+    &__secondary {
+      border: rem(1px) solid var(--color-secondary);
+    }
+
+    &__danger {
+      border: rem(1px) solid var(--color-danger);
+    }
+
+    &__success {
+      border: rem(1px) solid var(--color-success);
+    }
+
+    &__warning {
+      border: rem(1px) solid var(--color-warning);
+    }
+
+    &__info {
+      border: rem(1px) solid var(--color-info);
+    }
+  }
+
+  &__text {
+    &__primary {
+      color: var(--color-primary);
+    }
+
+    &__secondary {
+      color: var(--color-secondary);
+    }
+
+    &__danger {
+      color: var(--color-danger);
+    }
+
+    &__success {
+      color: var(--color-success);
+    }
+
+    &__warning {
+      color: var(--color-warning);
+    }
+
+    &__info {
+      color: var(--color-info);
+    }
+  }
+
+  &__disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &__sm {
+    padding: rem(4px) rem(8px);
+    border-radius: rem(4px);
+  }
+
+  &__base {
+    padding: rem(6px) rem(12px);
+    border-radius: rem(6px);
+  }
+
+  &__md {
+    padding: rem(8px) rem(16px);
+    border-radius: rem(8px);
+  }
+
+  &__lg {
+    padding: rem(12px) rem(24px);
+    border-radius: rem(12px);
+  }
+
+  &__square {
+    aspect-ratio: 1;
+  }
+
+  &__circle {
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  &__rectangle {
+    aspect-ratio: 16 / 9;
+  }
+}
