@@ -8,12 +8,13 @@ import { TypographyProps } from "../Typography";
 import styles from "./styles.module.scss";
 
 type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
-  as?: "button";
+  as: "button";
+  type: "button" | "submit" | "reset";
   children: React.ReactNode;
 };
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  as: "a";
+  as?: "a";
   href: string;
   children: React.ReactNode;
 };
@@ -23,7 +24,7 @@ type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success" | 
 type ButtonSize = "sm" | "base" | "md" | "lg";
 type ButtonRounded = "square" | "circle" | "sm" | "base" | "md" | "lg" | "full" | "none";
 
-type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline"> & {
+type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline" | "tag"> & {
   variant?: ButtonVariant;
   color?: ButtonColor;
   size?: ButtonSize;
@@ -60,18 +61,18 @@ const Button = ({
     className
   );
 
-  if (props.as === "a") {
+  if (props.as === "button") {
     return (
-      <Link className={classes} {...props}>
+      <button className={classes} {...props}>
         {children}
-      </Link>
+      </button>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <Link className={classes} {...props}>
       {children}
-    </button>
+    </Link>
   );
 };
 

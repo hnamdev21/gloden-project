@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 import Button from "@/components/Button";
@@ -13,16 +12,12 @@ import { AUTH_ROUTE_PATH } from "@/constants/routePath";
 const RegisterModule = () => {
   return (
     <div className="w-full h-full flex">
-      <div className="h-full w-1/2 hidden lg:block">
-        <Image src="/images/register-background.jpg" alt="Login background" width={1920} height={1080} />
-      </div>
+      <div className="h-full flex-1 flex flex-col justify-center items-center">
+        <Typography tag="h1" fontSize="3xl" textAlign="center">
+          Register to {BRAND_NAME}
+        </Typography>
 
-      <div className="h-full flex-1 flex justify-center items-center">
-        <div className="lg:w-2/5">
-          <Typography tag="h1" fontSize="3xl" textAlign="center">
-            Register to {BRAND_NAME}
-          </Typography>
-
+        <div className="lg:w-1/6">
           <form>
             <FieldContainer>
               <Label htmlFor="email">Email</Label>
@@ -39,14 +34,14 @@ const RegisterModule = () => {
               <PasswordInput id="confirm_password" placeholder="********" sizeElement="sm" />
             </FieldContainer>
 
-            <Button className="w-full" rounded="square" type="submit">
+            <Button as="button" className="w-full" rounded="square" type="submit">
               Register
             </Button>
           </form>
 
           <FieldContainer className="mt-[1.6rem] flex justify-center">
             <Typography fontSize="sm">Already have an account?&nbsp;</Typography>
-            <Button as="a" href={AUTH_ROUTE_PATH.LOGIN} variant="text" fontSize="sm">
+            <Button href={AUTH_ROUTE_PATH.LOGIN} variant="text" fontSize="sm">
               Login now
             </Button>
           </FieldContainer>
