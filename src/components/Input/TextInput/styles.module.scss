@@ -4,7 +4,7 @@
 
 .input {
   border: rem(1px) solid var(--border-input);
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s;
   outline: none;
 
   &::placeholder {
@@ -64,7 +64,7 @@
     top: 50%;
     right: rem(12px);
     transform: translateY(-50%);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.3s;
 
     &:hover {
       opacity: 0.8;

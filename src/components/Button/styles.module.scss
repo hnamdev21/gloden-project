@@ -4,6 +4,11 @@
 
 .button {
   border: none;
+  transition: all 0.3s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 
   &__sm {
     padding: rem(4px) rem(8px);
