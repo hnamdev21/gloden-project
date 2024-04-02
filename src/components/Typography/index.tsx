@@ -40,7 +40,7 @@ const Typography = ({
     styles.text,
     `${styles[`text__${fontSize}`]}`,
     `${styles[`text__${textColor}`]}`,
-    `${styles[`text__${weight}`]}`,
+    `${styles[`text__weight__${weight}`]}`,
     `${styles[`text__${textTransform}`]}`,
     `${styles[`text__${textAlign}`]}`,
     italic && styles["text__italic"],

@@ -3,7 +3,65 @@
 }
 
 .button {
+  border: none;
+
+  &__sm {
+    padding: rem(4px) rem(8px);
+    border-radius: rem(4px);
+  }
+
+  &__base {
+    padding: rem(6px) rem(12px);
+    border-radius: rem(6px);
+  }
+
+  &__md {
+    padding: rem(8px) rem(16px);
+    border-radius: rem(8px);
+  }
+
+  &__lg {
+    padding: rem(12px) rem(24px);
+    border-radius: rem(12px);
+  }
+
+  &__rounded {
+    &__sm {
+      border-radius: rem(4px);
+    }
+
+    &__base {
+      border-radius: rem(6px);
+    }
+
+    &__md {
+      border-radius: rem(8px);
+    }
+
+    &__lg {
+      border-radius: rem(12px);
+    }
+
+    &__none {
+      border-radius: 0;
+    }
+
+    &__full {
+      border-radius: 9999px;
+    }
+
+    &__circle {
+      border-radius: 50%;
+    }
+
+    &__square {
+      border-radius: 0;
+    }
+  }
+
   &__contained {
+    color: var(--color-white);
+
     &__primary {
       background-color: var(--color-primary);
     }
@@ -26,6 +84,15 @@
 
     &__info {
       background-color: var(--color-info);
+    }
+
+    &__dark {
+      background-color: var(--color-dark);
+    }
+
+    &__light {
+      background-color: var(--color-light);
+      color: var(--color-dark);
     }
   }
 
@@ -53,9 +120,19 @@
     &__info {
       border: rem(1px) solid var(--color-info);
     }
+
+    &__dark {
+      border: rem(1px) solid var(--color-dark);
+    }
+
+    &__light {
+      border: rem(1px) solid var(--color-light);
+    }
   }
 
   &__text {
+    padding: 0;
+
     &__primary {
       color: var(--color-primary);
     }
@@ -79,43 +156,18 @@
     &__info {
       color: var(--color-info);
     }
+
+    &__dark {
+      color: var(--color-dark);
+    }
+
+    &__light {
+      color: var(--color-light);
+    }
   }
 
   &__disabled {
     opacity: 0.5;
     cursor: not-allowed;
-  }
-
-  &__sm {
-    padding: rem(4px) rem(8px);
-    border-radius: rem(4px);
-  }
-
-  &__base {
-    padding: rem(6px) rem(12px);
-    border-radius: rem(6px);
-  }
-
-  &__md {
-    padding: rem(8px) rem(16px);
-    border-radius: rem(8px);
-  }
-
-  &__lg {
-    padding: rem(12px) rem(24px);
-    border-radius: rem(12px);
-  }
-
-  &__square {
-    aspect-ratio: 1;
-  }
-
-  &__circle {
-    aspect-ratio: 1;
-    border-radius: 50%;
-  }
-
-  &__rectangle {
-    aspect-ratio: 16 / 9;
   }
 }

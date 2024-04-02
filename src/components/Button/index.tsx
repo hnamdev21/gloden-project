@@ -19,15 +19,15 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 type ButtonVariant = "contained" | "outlined" | "text";
-type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success";
+type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success" | "dark" | "light";
 type ButtonSize = "sm" | "base" | "md" | "lg";
-type ButtonShape = "square" | "rectangle" | "circle";
+type ButtonRounded = "square" | "circle" | "sm" | "base" | "md" | "lg" | "full" | "none";
 
 type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline"> & {
   variant?: ButtonVariant;
   color?: ButtonColor;
   size?: ButtonSize;
-  shape?: ButtonShape;
+  rounded?: ButtonRounded;
 };
 
 type Props = (DefaultButtonProps & ButtonProps) | (DefaultButtonProps & LinkProps);
@@ -36,7 +36,7 @@ const Button = ({
   variant = "contained",
   color = "primary",
   size = "base",
-  shape = "rectangle",
+  rounded = "base",
   fontSize = "base",
   textColor = "dark",
   weight = "base",
@@ -52,12 +52,11 @@ const Button = ({
     `${styles[`text__${textColor}`]}`,
     `${styles[`text__${weight}`]}`,
     `${styles[`text__${textTransform}`]}`,
-    `${styles[`text__${textAlign}`]}`,
     styles.button,
     `${styles[`button__${variant}`]}`,
-    `${styles[`button__${color}`]}`,
+    `${styles[`button__${variant}__${color}`]}`,
     `${styles[`button__${size}`]}`,
-    `${styles[`button__${shape}`]}`,
+    `${styles[`button__rounded__${rounded}`]}`,
     className
   );
 

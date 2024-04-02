@@ -1,0 +1,73 @@
+.text {
+  @include text;
+}
+
+.input {
+  border: rem(1px) solid var(--border-input);
+  transition: all 0.25s ease-in-out;
+  outline: none;
+
+  &::placeholder {
+    @include text-sm;
+  }
+
+  &:hover {
+    border-color: var(--color-dark);
+  }
+
+  &:focus {
+    border-color: var(--color-dark);
+  }
+
+  // Size
+  &__sm {
+    padding: rem(6px) rem(10px);
+  }
+
+  &__base {
+    padding: rem(8px) rem(12px);
+  }
+
+  &__md {
+    padding: rem(10px) rem(14px);
+  }
+
+  &__lg {
+    padding: rem(12px) rem(16px);
+  }
+
+  // width
+  &__full {
+    width: 100%;
+  }
+
+  &__auto {
+    width: auto;
+  }
+
+  // Type
+  &__text {
+    outline: none;
+  }
+
+  &__error {
+    border-color: var(--color-danger);
+  }
+}
+
+.fieldContainer {
+  position: relative;
+
+  .eyeIconContainer {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: rem(12px);
+    transform: translateY(-50%);
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

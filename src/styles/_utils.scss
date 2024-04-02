@@ -37,73 +37,73 @@
 @mixin text-12xl {
   font-size: var(--fs-12xl);
   font-weight: var(--fw-bold);
-  line-height: calc(1.6 * var(--fs-12xl));
+  // line-height: calc(1.05 * var(--fs-12xl));
 }
 
 @mixin text-10xl {
   font-size: var(--fs-10xl);
   font-weight: var(--fw-bold);
-  line-height: calc(1.6 * var(--fs-10xl));
+  // line-height: calc(1.05 * var(--fs-10xl));
 }
 
 @mixin text-6xl {
   font-size: var(--fs-6xl);
   font-weight: var(--fw-bold);
-  line-height: calc(1.6 * var(--fs-6xl));
+  // line-height: calc(1.05 * var(--fs-6xl));
 }
 
 @mixin text-4xl {
   font-size: var(--fs-4xl);
   font-weight: var(--fw-bold);
-  line-height: calc(1.6 * var(--fs-4xl));
+  // line-height: calc(1.05 * var(--fs-4xl));
 }
 
 @mixin text-3xl {
   font-size: var(--fs-3xl);
   font-weight: var(--fw-bold);
-  line-height: calc(1.6 * var(--fs-3xl));
+  // line-height: calc(1.05 * var(--fs-3xl));
 }
 
 @mixin text-2xl {
   font-size: var(--fs-2xl);
   font-weight: var(--fw-md);
-  line-height: calc(1.6 * var(--fs-2xl));
+  // line-height: calc(1.05 * var(--fs-2xl));
 }
 
 @mixin text-xl {
   font-size: var(--fs-xl);
   font-weight: var(--fw-md);
-  line-height: calc(1.6 * var(--fs-xl));
+  // line-height: calc(1.05 * var(--fs-xl));
 }
 
 @mixin text-lg {
   font-size: var(--fs-lg);
   font-weight: var(--fw-base);
-  line-height: calc(1.6 * var(--fs-lg));
+  // line-height: calc(1.05 * var(--fs-lg));
 }
 
 @mixin text-md {
   font-size: var(--fs-md);
   font-weight: var(--fw-md);
-  line-height: calc(1.6 * var(--fs-md));
+  // line-height: calc(1.05 * var(--fs-md));
 }
 
 @mixin text-base {
   font-size: var(--fs-base);
   font-weight: var(--fw-md);
-  line-height: calc(1.6 * var(--fs-base));
+  // line-height: calc(1.05 * var(--fs-base));
 }
 
 @mixin text-sm {
   font-size: var(--fs-sm);
   font-weight: var(--fw-base);
-  line-height: calc(1.6 * var(--fs-sm));
+  // line-height: calc(1.05 * var(--fs-sm));
 }
 
 @mixin text-xs {
   font-size: var(--fs-xs);
   font-weight: var(--fw-base);
-  line-height: calc(1.6 * var(--fs-xs));
+  // line-height: calc(1.05 * var(--fs-xs));
 }
 
 @mixin text {
@@ -155,47 +155,15 @@
     @include text-xs;
   }
 
-  &__3xl {
-    @include text-3xl;
-  }
-
-  &__2xl {
-    @include text-2xl;
-  }
-
-  &__xl {
-    @include text-xl;
-  }
-
-  &__lg {
-    @include text-lg;
-  }
-
-  &__md {
-    @include text-md;
-  }
-
-  &__base {
-    @include text-base;
-  }
-
-  &__sm {
-    @include text-sm;
-  }
-
-  &__xs {
-    @include text-xs;
-  }
-
-  &__thin {
+  &__weight__thin {
     font-weight: var(--fw-thin);
   }
 
-  &__base {
+  &__weight__base {
     font-weight: var(--fw-base);
   }
 
-  &__md {
+  &__weight__md {
     font-weight: var(--fw-md);
   }
 

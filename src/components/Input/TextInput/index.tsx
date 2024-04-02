@@ -1,3 +1,5 @@
+"use client";
+
 import cn from "classnames";
 import React from "react";
 
@@ -35,7 +37,7 @@ const TextInputComponent = (
     styles.text,
     `${styles[`text__${fontSize}`]}`,
     `${styles[`text__${textColor}`]}`,
-    `${styles[`text__${weight}`]}`,
+    `${styles[`text__weight__${weight}`]}`,
     `${styles[`text__${textTransform}`]}`,
     `${styles[`text__${textAlign}`]}`,
     styles.input,
@@ -46,6 +48,10 @@ const TextInputComponent = (
   );
 
   return <input type={type} {...props} className={classes} ref={ref} />;
+};
+
+type InputPasswordProps = InputProps & {
+  type?: "password";
 };
 
 TextInputComponent.Password = function InputPasswordComponent(
@@ -61,9 +67,7 @@ TextInputComponent.Password = function InputPasswordComponent(
     children,
     className = "",
     ...props
-  }: InputProps & {
-    type?: "password";
-  },
+  }: InputPasswordProps,
   ref?: React.Ref<HTMLInputElement>
 ) {
   const [isShowPassword, setIsShowPassword] = React.useState<boolean>(false);
@@ -72,7 +76,7 @@ TextInputComponent.Password = function InputPasswordComponent(
     styles.text,
     `${styles[`text__${fontSize}`]}`,
     `${styles[`text__${textColor}`]}`,
-    `${styles[`text__${weight}`]}`,
+    `${styles[`text__weight__${weight}`]}`,
     `${styles[`text__${textTransform}`]}`,
     `${styles[`text__${textAlign}`]}`,
     styles.input,
@@ -91,7 +95,12 @@ TextInputComponent.Password = function InputPasswordComponent(
     </div>
   );
 };
+TextInputComponent.displayName = "TextInput";
 
-const TextInput = React.forwardRef<HTMLInputElement, InputProps>(TextInputComponent);
+const PasswordInputRef = React.forwardRef<HTMLInputElement, InputPasswordProps>(TextInputComponent.Password);
+export const PasswordInput = React.memo(PasswordInputRef);
+
+const TextInputRef = React.forwardRef<HTMLInputElement, InputProps>(TextInputComponent);
+const TextInput = React.memo(TextInputRef);
 
 export default TextInput;
