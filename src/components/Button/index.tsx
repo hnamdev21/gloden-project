@@ -19,7 +19,7 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
 };
 
-type ButtonVariant = "contained" | "outlined" | "text" | "tertiary" | "icon";
+type ButtonVariant = "contained" | "outlined" | "link" | "tertiary" | "icon" | "text";
 type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success" | "dark" | "light";
 type ButtonSize = "sm" | "base" | "md" | "lg";
 type ButtonRounded = "square" | "circle" | "sm" | "base" | "md" | "lg" | "full" | "none";

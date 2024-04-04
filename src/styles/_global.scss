@@ -1,8 +1,12 @@
 body {
   font-size: var(--fs-base);
   font-weight: var(--fw-base);
-  background-color: var(--color-light);
   line-height: 1.5;
+  background-color: var(--color-light);
+
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 svg {

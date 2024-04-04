@@ -133,37 +133,41 @@
 
   &__text {
     padding: 0;
+  }
+
+  &__link {
+    padding: 0;
 
     &__primary {
-      color: var(--color-primary);
+      color: var(--color-primary) !important;
     }
 
     &__secondary {
-      color: var(--color-secondary);
+      color: var(--color-secondary) !important;
     }
 
     &__danger {
-      color: var(--color-danger);
+      color: var(--color-danger) !important;
     }
 
     &__success {
-      color: var(--color-success);
+      color: var(--color-success) !important;
     }
 
     &__warning {
-      color: var(--color-warning);
+      color: var(--color-warning) !important;
     }
 
     &__info {
-      color: var(--color-info);
+      color: var(--color-info) !important;
     }
 
     &__dark {
-      color: var(--color-dark);
+      color: var(--color-dark) !important;
     }
 
     &__light {
-      color: var(--color-light);
+      color: var(--color-light) !important;
     }
   }
 

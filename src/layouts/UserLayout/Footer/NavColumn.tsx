@@ -23,7 +23,14 @@ const NavColumn = ({ label, items, className = "" }: NavColumnProps) => {
 
       <nav className="flex flex-col">
         {items.map((item) => (
-          <Button key={item.label} href={item.path} variant="text" weight="extrabold" textColor="white">
+          <Button
+            key={item.label}
+            href={item.path}
+            variant="text"
+            weight="extrabold"
+            textColor="white"
+            className="max-w-max"
+          >
             {item.label}
           </Button>
         ))}
