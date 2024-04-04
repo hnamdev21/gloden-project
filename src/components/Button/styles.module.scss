@@ -1,7 +1,3 @@
-.text {
-  @include text;
-}
-
 .button {
   border: none;
   transition: all 0.3s;
@@ -21,7 +17,7 @@
   }
 
   &__md {
-    padding: rem(8px) rem(16px);
+    padding: rem(9px) rem(18px);
     border-radius: rem(8px);
   }
 
@@ -65,7 +61,7 @@
   }
 
   &__contained {
-    color: var(--color-white);
+    color: var(--color-white) !important;
 
     &__primary {
       background-color: var(--color-primary);
@@ -97,7 +93,7 @@
 
     &__light {
       background-color: var(--color-light);
-      color: var(--color-dark);
+      color: var(--color-dark) !important;
     }
   }
 
@@ -171,8 +167,27 @@
     }
   }
 
+  &__tertiary {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__icon {
+    padding: 0;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--fs-xl);
+    height: var(--fs-xl);
+  }
+
   &__disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
+}
+
+.text {
+  @include text;
 }

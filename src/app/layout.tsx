@@ -3,6 +3,7 @@ import "@styles/app.scss";
 import type { Metadata } from "next";
 import React from "react";
 
+import GridDebugger from "@/components/GridDebugger";
 import { font } from "@/utils/font";
 
 export const metadata: Metadata = {
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.ntr.className}>{children}</body>
+      <body className={font.ntr.className}>
+        {children}
+        <GridDebugger />
+      </body>
     </html>
   );
 }

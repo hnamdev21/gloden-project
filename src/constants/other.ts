@@ -1,31 +1,45 @@
-export const menuData = [
+import { USER_ROUTE_PATH } from "./routePath";
+
+export const headerNav = [
   {
-    title: "Home",
-    path: "/",
+    label: "Blogs",
+    path: USER_ROUTE_PATH.BLOGS,
   },
   {
-    title: "Products",
-    path: "/products",
-    subItems: [
-      { title: "Product 1", path: "/product-1" },
-      { title: "Product 2", path: "/product-2" },
+    label: "About",
+    path: USER_ROUTE_PATH.ABOUT,
+  },
+  {
+    label: "Contact",
+    path: USER_ROUTE_PATH.CONTACT,
+  },
+];
+
+export const footerNav = [
+  {
+    label: "Information",
+    items: [
       {
-        title: "Product 3",
-        path: "/product-3",
-        subItems: [
-          { title: "Product 3.1", path: "/product-3-1" },
-          { title: "Product 3.2", path: "/product-3-2" },
-          { title: "Product 3.3", path: "/product-3-3" },
-        ],
+        label: "About Us",
+        path: USER_ROUTE_PATH.ABOUT,
+      },
+      {
+        label: "Contact Us",
+        path: USER_ROUTE_PATH.CONTACT,
       },
     ],
   },
   {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
+    label: "Support",
+    items: [
+      {
+        label: "FAQ",
+        path: USER_ROUTE_PATH.FAQ,
+      },
+      {
+        label: "Privacy Policy",
+        path: USER_ROUTE_PATH.PRIVACY_POLICY,
+      },
+    ],
   },
 ];

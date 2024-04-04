@@ -1,6 +1,6 @@
 .divider {
   border-top: rem(1px) solid var(--color-gray);
-  margin: rem(20px) 0;
+  margin: 0;
 
   &__with_text {
     display: flex;
@@ -8,7 +8,7 @@
     justify-content: center;
     @include text-base;
     color: var(--color-dark);
-    margin: rem(20px) 0;
+    margin: 0;
 
     &::before,
     &::after {

@@ -167,8 +167,12 @@
     font-weight: var(--fw-md);
   }
 
-  &__bold {
+  &__weight__bold {
     font-weight: var(--fw-bold);
+  }
+
+  &__weight__extrabold {
+    font-weight: var(--fw-extra-bold);
   }
 
   &__primary {
@@ -201,6 +205,18 @@
 
   &__white {
     color: var(--color-white);
+  }
+
+  &__black {
+    color: var(--color-black);
+  }
+
+  &__gray {
+    color: var(--color-gray);
+  }
+
+  &__light {
+    color: var(--color-light);
   }
 
   &__capitalize {

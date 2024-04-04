@@ -1,0 +1,14 @@
+.nav {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: rem(1px);
+    height: 60%;
+    background-color: var(--border-input);
+    transform: translateX(rem(12px)) translateY(-50%);
+  }
+}

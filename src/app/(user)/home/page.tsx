@@ -1,9 +1,9 @@
 import React from "react";
 
-import HeroModule from "@/modules/Hero";
+import HomeModule from "@/modules/Home";
 
 const HomePage = () => {
-  return <HeroModule />;
+  return <HomeModule />;
 };
 
 export default HomePage;

@@ -4,10 +4,10 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 type GapProps = {
-  size: "sm" | "base" | "lg";
+  size?: "sm" | "base" | "lg";
 };
 
-const Gap = ({ size }: GapProps) => {
+const Gap = ({ size = "base" }: GapProps) => {
   const classes = cn(styles.gap, `${styles[`gap__${size}`]}`);
 
   return <div className={classes} />;

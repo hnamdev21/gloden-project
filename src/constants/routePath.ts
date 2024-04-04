@@ -5,6 +5,8 @@ export const USER_ROUTE_PATH = {
   ABOUT: "/about",
   CONTACT: "/contact",
   BLOGS: "/blogs",
+  FAQ: "/faq",
+  PRIVACY_POLICY: "/privacy-policy",
 } as const;
 
 export const AUTH_ROUTE_PATH = {
