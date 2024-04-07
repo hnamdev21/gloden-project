@@ -13,6 +13,10 @@ export const headerNav = [
     label: "Contact",
     path: USER_ROUTE_PATH.CONTACT,
   },
+  {
+    label: "FAQs",
+    path: USER_ROUTE_PATH.FAQ,
+  },
 ];
 
 export const footerNav = [

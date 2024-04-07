@@ -13,7 +13,7 @@ import NavColumn from "./NavColumn";
 
 const Footer = () => {
   return (
-    <footer className="lg:pt-[4rem] lg:pb-[2rem]" style={{ background: "var(--color-black)" }}>
+    <footer className="lg:pt-[4rem] lg:pb-[1rem] lg:mt-[3rem]" style={{ background: "var(--color-black)" }}>
       <Container className="grid lg:grid-cols-12 lg:gap-[3rem]">
         <div className="lg:col-span-7 grid lg:grid-cols-7 lg:gap-[3rem]">
           {footerNav.map((nav) => (

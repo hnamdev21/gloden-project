@@ -24,7 +24,7 @@ type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success" | 
 type ButtonSize = "sm" | "base" | "md" | "lg";
 type ButtonRounded = "square" | "circle" | "sm" | "base" | "md" | "lg" | "full" | "none";
 
-type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline" | "tag"> & {
+type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
   variant?: ButtonVariant;
   color?: ButtonColor;
   size?: ButtonSize;

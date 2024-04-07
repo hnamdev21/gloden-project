@@ -7,7 +7,7 @@
   }
 
   &__sm {
-    padding: rem(4px) rem(8px);
+    padding: 0 rem(12px);
     border-radius: rem(4px);
   }
 
@@ -128,6 +128,7 @@
 
     &__light {
       border: rem(1px) solid var(--color-light);
+      color: var(--color-light) !important;
     }
   }
 
@@ -182,8 +183,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--fs-xl);
-    height: var(--fs-xl);
+    width: var(--fs-base);
+    height: var(--fs-base);
   }
 
   &__disabled {

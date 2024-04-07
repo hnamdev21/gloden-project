@@ -6,7 +6,7 @@ import { TypographyProps } from "@/components/Typography";
 import styles from "./styles.module.scss";
 
 // prettier-ignore
-type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & Omit<TypographyProps, "italic" | "underline"> & {
+type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
   htmlFor: string;
   required?: boolean;
 }

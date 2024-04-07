@@ -1,5 +1,5 @@
 export type Entity = {
-  id: string;
+  id: number;
   createdAt: string;
   updatedAt: string;
 };
@@ -14,8 +14,8 @@ export type Role = Entity & {
 };
 
 export type RolePermission = Entity & {
-  role_id: string;
-  table_id: string;
+  roleId: number;
+  tableId: number;
   create: boolean;
   read: boolean;
   update: boolean;
@@ -23,16 +23,19 @@ export type RolePermission = Entity & {
 };
 
 export type User = Entity & {
+  fullName: string;
   email: string;
-  password: string;
-  role_id: string;
+  // password: string;
+  roleId: number;
   phone: string;
   banned: boolean;
   confirmed: boolean;
+  role: Role;
+  rolePermissions: RolePermission[];
 };
 
 export type BannedUser = Entity & {
-  user_id: string;
+  userId: number;
   reason: string;
 };
 
@@ -41,18 +44,22 @@ export type Tag = Entity & {
   slug: string;
 };
 
+export type Comment = Entity & {
+  blogId: number;
+  userId: number;
+  content: string;
+  parent_id: number;
+};
+
 export type Blog = Entity & {
-  created_by: string;
+  createdBy: number;
+  thumbnailPath: string;
   title: string;
   content: string;
   views: number;
   disabled: boolean;
   slug: string;
-};
-
-export type Comment = Entity & {
-  blog_id: string;
-  user_id: string;
-  content: string;
-  parent_id: string;
+  tags: Tag[];
+  comments: Comment[];
+  user: User;
 };

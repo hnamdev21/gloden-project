@@ -20,6 +20,7 @@ export type TypographyProps = React.HTMLAttributes<HTMLHeadingElement> & {
   textAlign?: TextAlign;
   italic?: boolean;
   underline?: boolean;
+  noWrap?: boolean;
 };
 
 const Typography = ({
@@ -31,6 +32,7 @@ const Typography = ({
   textAlign = "left",
   italic = false,
   underline = false,
+  noWrap = false,
   className = "",
   children,
   ...props
@@ -45,6 +47,7 @@ const Typography = ({
     `${styles[`text__${textAlign}`]}`,
     italic && styles["text__italic"],
     underline && styles["text__underline"],
+    noWrap && styles["text__nowrap"],
     className
   );
 

@@ -1,11 +1,25 @@
+$border: rem(1px) solid var(--color-gray);
+
 .divider {
-  border-top: rem(1px) solid var(--color-gray);
+  border-top: $border;
   margin: 0;
+
+  &__vertical {
+    border-left: $border;
+    width: rem(1px);
+    height: 100%;
+  }
+
+  &__horizontal {
+    width: 100%;
+    height: rem(1px);
+  }
 
   &__with_text {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
     @include text-base;
     color: var(--color-dark);
     margin: 0;

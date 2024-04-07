@@ -3,13 +3,14 @@
 import cn from "classnames";
 import React from "react";
 
+import Button from "@/components/Button";
 import { CloseEyeIcon, OpenEyeIcon } from "@/components/Icons";
 import { TypographyProps } from "@/components/Typography";
 
 import styles from "./styles.module.scss";
 
 // prettier-ignore
-type InputProps = React.InputHTMLAttributes<HTMLInputElement> & Omit<TypographyProps, "italic" | "underline"> & {
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
     type?: "text" | "email" | "number" | "date" | "datetime-local" | "hidden";
     sizeElement?: "sm" | "base" | "md" | "lg";
     width?: "full" | "auto";
@@ -89,9 +90,16 @@ TextInputComponent.Password = function InputPasswordComponent(
   return (
     <div className={styles.fieldContainer}>
       <input {...props} type={isShowPassword ? "text" : "password"} className={classes} ref={ref} />
-      <span className={`${styles.eyeIconContainer}`} onClick={() => setIsShowPassword(!isShowPassword)}>
+      <Button
+        as="button"
+        type="button"
+        variant="icon"
+        size="sm"
+        className={`${styles.eyeIconContainer}`}
+        onClick={() => setIsShowPassword(!isShowPassword)}
+      >
         {isShowPassword ? <CloseEyeIcon /> : <OpenEyeIcon />}
-      </span>
+      </Button>
     </div>
   );
 };
