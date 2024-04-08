@@ -10,10 +10,18 @@
   }
 
   &__md {
-    height: rem(24px);
+    height: rem(20px);
   }
 
   &__lg {
-    height: rem(32px);
+    height: rem(30px);
+  }
+
+  &__xl {
+    height: rem(40px);
+  }
+
+  &__2xl {
+    height: rem(80px);
   }
 }

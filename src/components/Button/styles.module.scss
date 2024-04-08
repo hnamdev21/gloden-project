@@ -6,6 +6,11 @@
     filter: brightness(0.9);
   }
 
+  &__xs {
+    padding: 0 rem(30px);
+    border-radius: rem(2px);
+  }
+
   &__sm {
     padding: 0 rem(12px);
     border-radius: rem(4px);

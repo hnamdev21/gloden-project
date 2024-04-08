@@ -287,3 +287,15 @@ export const mockupBlogs: Array<Blog> = [
     user: mockupUsers[0],
   },
 ];
+
+export const mockupRecentNews: Array<Blog> = [
+  mockupBlogs[0],
+  mockupBlogs[1],
+  mockupBlogs[2],
+  mockupBlogs[3],
+  mockupBlogs[4],
+  mockupBlogs[5],
+  mockupBlogs[6],
+  mockupBlogs[7],
+  mockupBlogs[8],
+];

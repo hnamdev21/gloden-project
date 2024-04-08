@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 type GapProps = {
-  size?: "sm" | "base" | "lg";
+  size?: "sm" | "base" | "md" | "lg" | "xl" | "2xl";
 };
 
 const Gap = ({ size = "base" }: GapProps) => {

@@ -21,7 +21,7 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 type ButtonVariant = "contained" | "outlined" | "link" | "tertiary" | "icon" | "text";
 type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success" | "dark" | "light";
-type ButtonSize = "sm" | "base" | "md" | "lg";
+type ButtonSize = "xs" | "sm" | "base" | "md" | "lg";
 type ButtonRounded = "square" | "circle" | "sm" | "base" | "md" | "lg" | "full" | "none";
 
 type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
@@ -51,7 +51,7 @@ const Button = ({
     styles.text,
     `${styles[`text__${fontSize}`]}`,
     `${styles[`text__${textColor}`]}`,
-    `${styles[`text__${weight}`]}`,
+    `${styles[`text__weight__${weight}`]}`,
     `${styles[`text__${textTransform}`]}`,
     styles.button,
     `${styles[`button__${variant}`]}`,
