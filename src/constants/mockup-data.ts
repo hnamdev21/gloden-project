@@ -1,4 +1,4 @@
-import { Blog, Role, Tag, User } from "entity";
+import { Blog, Category, Role, Tag, User } from "entity";
 
 export const mockupRoles: Array<Role> = [
   {
@@ -61,6 +61,86 @@ export const mockupTags: Array<Tag> = [
   },
 ];
 
+export const mockupCategories: Array<Category> = [
+  {
+    id: 1,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Technology",
+    slug: "technology",
+  },
+  {
+    id: 2,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Sport",
+    slug: "sport",
+  },
+  {
+    id: 3,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Food",
+    slug: "food",
+  },
+  {
+    id: 4,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Travel",
+    slug: "travel",
+  },
+  {
+    id: 5,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Fashion",
+    slug: "fashion",
+  },
+  {
+    id: 6,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Economics",
+    slug: "economics",
+  },
+  {
+    id: 7,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Health",
+    slug: "health",
+  },
+  {
+    id: 8,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Science",
+    slug: "science",
+  },
+  {
+    id: 9,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Entertainment",
+    slug: "entertainment",
+  },
+  {
+    id: 10,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Cryptocurrency",
+    slug: "cryptocurrency",
+  },
+  {
+    id: 11,
+    createdAt: "2023-06-03",
+    updatedAt: "2023-06-03",
+    title: "Business",
+    slug: "business",
+  },
+];
+
 export const mockupBlogs: Array<Blog> = [
   {
     id: 1,
@@ -73,6 +153,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-1",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -89,6 +171,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-2",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -105,6 +189,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-3",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -121,6 +207,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-4",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -137,6 +225,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-5",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -153,6 +243,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-6",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -169,6 +261,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-7",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,
@@ -185,6 +279,8 @@ export const mockupBlogs: Array<Blog> = [
     views: 0,
     disabled: false,
     slug: "blog-8",
+    categoryId: 1,
+    category: mockupCategories[0],
     tags: mockupTags,
     comments: [],
     createdBy: 1,

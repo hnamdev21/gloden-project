@@ -44,6 +44,11 @@ export type Tag = Entity & {
   slug: string;
 };
 
+export type Category = Entity & {
+  title: string;
+  slug: string;
+};
+
 export type Comment = Entity & {
   blogId: number;
   userId: number;
@@ -59,6 +64,8 @@ export type Blog = Entity & {
   views: number;
   disabled: boolean;
   slug: string;
+  categoryId: number;
+  category: Category;
   tags: Tag[];
   comments: Comment[];
   user: User;

@@ -1,9 +1,9 @@
 import cn from "classnames";
 import { Blog } from "entity";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-import Button from "@/components/Button";
 import Typography from "@/components/Typography";
 
 type NoDescriptionCardProps = {
@@ -12,19 +12,23 @@ type NoDescriptionCardProps = {
 };
 
 const NoDescriptionCard = ({ blog, className = "" }: NoDescriptionCardProps) => {
-  const { thumbnailPath, title, slug, createdAt, user } = blog;
+  const { thumbnailPath, title, slug, createdAt, user, category } = blog;
 
   return (
-    <div className={cn("h-full max-h-max relative", className)}>
+    <Link href={`/blogs/${slug}`} className={cn("block w-full h-full max-h-max relative", className)}>
       <Image src={thumbnailPath} alt={`Thumbnail of ${title}`} fill />
 
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40" />
 
       <div className="absolute top-0 left-0 w-full h-full p-[1rem] flex flex-col justify-between">
-        <Button href={`/blogs/${slug}`} variant="outlined" fontSize="sm" color="light" className="max-w-max">
-          Read More
-        </Button>
+        <Typography
+          fontSize="sm"
+          textColor="light"
+          className="max-w-max lg:px-[1rem] lg:py-[.5rem] border border-solid border-white"
+        >
+          {category.title}
+        </Typography>
 
         <div className="w-full">
           <Typography tag="h6" textColor="light" fontSize="sm" noWrap>
@@ -36,7 +40,7 @@ const NoDescriptionCard = ({ blog, className = "" }: NoDescriptionCardProps) => 
           </Typography>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
