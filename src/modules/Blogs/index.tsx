@@ -81,12 +81,18 @@ const BlogsModule = () => {
 
       <section>
         <Container>
-          <div className="w-full flex items-center justify-between lg:mb-[.8rem]">
-            <Typography tag="h3" fontSize="lg" weight="bold">
+          <div className="w-full grid lg:grid-cols-12 lg:gap-[3rem] lg:mb-[.8rem]">
+            <Typography tag="h3" fontSize="lg" weight="bold" className="lg:col-span-2">
               Recent News
             </Typography>
 
-            <Button href="/blogs" variant="outlined" fontSize="lg" size="xs" color="dark" className="hidden lg:block">
+            <Button
+              href="/blogs"
+              variant="outlined"
+              fontSize="base"
+              color="dark"
+              className="hidden lg:flex lg:col-start-12 lg:col-span-1"
+            >
               View All
             </Button>
           </div>

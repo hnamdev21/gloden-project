@@ -48,6 +48,8 @@ const Button = ({
   ...props
 }: Props) => {
   const classes = cn(
+    "flex items-center justify-center align-middle",
+    "cursor-pointer",
     styles.text,
     `${styles[`text__${fontSize}`]}`,
     `${styles[`text__${textColor}`]}`,

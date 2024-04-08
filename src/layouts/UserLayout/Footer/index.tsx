@@ -26,12 +26,12 @@ const Footer = () => {
             Be the first to hear about the latest offers.
           </Typography>
 
-          <form className="grid lg:grid-cols-10">
-            <div className="lg:col-span-8">
+          <form className="grid lg:grid-cols-5 lg:gap-[3rem]">
+            <div className="lg:col-span-4">
               <TextInput placeholder="example@xyz.com" />
             </div>
 
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-1 lg:-ml-[3rem]">
               <Button as="button" variant="contained" color="primary" type="submit" size="md" className="w-full">
                 Subscribe
               </Button>
