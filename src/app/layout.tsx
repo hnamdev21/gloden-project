@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.ntr.className}>
+      <body className={font.roboto.className}>
         {children}
         <GridDebugger />
       </body>

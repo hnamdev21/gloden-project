@@ -1,10 +1,10 @@
 "use client";
 
 import cn from "classnames";
+import { InheritedTypographyProps } from "component";
 import Link from "next/link";
 import React from "react";
 
-import { TypographyProps } from "../Typography";
 import styles from "./styles.module.scss";
 
 type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
@@ -24,7 +24,7 @@ type ButtonColor = "primary" | "secondary" | "danger" | "warning" | "success" | 
 type ButtonSize = "xs" | "sm" | "base" | "md" | "lg";
 type ButtonRounded = "square" | "circle" | "sm" | "base" | "md" | "lg" | "full" | "none";
 
-type DefaultButtonProps = Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
+type DefaultButtonProps = InheritedTypographyProps & {
   variant?: ButtonVariant;
   color?: ButtonColor;
   size?: ButtonSize;

@@ -1,5 +1,4 @@
-// Example: <p>Hello <b>World</b></p><p>Hi</p>
-// Output: Hello World
+//  MUST RUN IN CLIENT SIDE
 export const getPlainText = (html: string) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");

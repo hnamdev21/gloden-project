@@ -89,9 +89,10 @@ const BlogsModule = () => {
             <Button
               href="/blogs"
               variant="outlined"
-              fontSize="base"
+              fontSize="md"
               color="dark"
               className="hidden lg:flex lg:col-start-12 lg:col-span-1"
+              size="sm"
             >
               View All
             </Button>

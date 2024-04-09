@@ -1,27 +1,8 @@
 import cn from "classnames";
+import { TypographyProps } from "component";
 import React from "react";
 
 import styles from "./styles.module.scss";
-
-// prettier-ignore
-type FontColor = "info" | "danger" | "warning" | "success" | "primary" | "secondary" | "dark" | "light" | "white" | "black";
-type FontSize = "xs" | "sm" | "base" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "6xl" | "10xl";
-type FontWeight = "thin" | "base" | "md" | "bold" | "extrabold";
-type TextTransform = "uppercase" | "lowercase" | "capitalize" | "normal" | "none";
-type TextAlign = "left" | "center" | "right" | "justify";
-type Tag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
-
-export type TypographyProps = React.HTMLAttributes<HTMLHeadingElement> & {
-  tag?: Tag;
-  fontSize?: FontSize;
-  textColor?: FontColor;
-  weight?: FontWeight;
-  textTransform?: TextTransform;
-  textAlign?: TextAlign;
-  italic?: boolean;
-  underline?: boolean;
-  noWrap?: boolean;
-};
 
 const Typography = ({
   tag: Tag = "p",
@@ -36,7 +17,7 @@ const Typography = ({
   className = "",
   children,
   ...props
-}: TypographyProps & { children: React.ReactNode }) => {
+}: TypographyProps) => {
   const TagName = Tag;
   const classes = cn(
     styles.text,

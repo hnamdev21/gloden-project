@@ -17,7 +17,7 @@ type NavColumnProps = {
 const NavColumn = ({ label, items, className = "" }: NavColumnProps) => {
   return (
     <div className={className}>
-      <Typography className="mb-[.8rem] " tag="h6" textColor="light" weight="thin">
+      <Typography className="mb-[.8rem] " tag="h6" textColor="light" fontSize="sm">
         {label}
       </Typography>
 
@@ -27,7 +27,7 @@ const NavColumn = ({ label, items, className = "" }: NavColumnProps) => {
             key={item.label}
             href={item.path}
             variant="text"
-            weight="extrabold"
+            // weight="extrabold"
             textColor="white"
             className="max-w-max"
           >

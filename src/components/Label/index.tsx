@@ -1,12 +1,11 @@
 import cn from "classnames";
+import { InheritedTypographyProps } from "component";
 import React from "react";
-
-import { TypographyProps } from "@/components/Typography";
 
 import styles from "./styles.module.scss";
 
 // prettier-ignore
-type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
+type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & InheritedTypographyProps & {
   htmlFor: string;
   required?: boolean;
 }

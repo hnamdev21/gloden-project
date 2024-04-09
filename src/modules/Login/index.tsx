@@ -11,7 +11,7 @@ import { AUTH_ROUTE_PATH } from "@/constants/routePath";
 const LoginModule = () => {
   return (
     <React.Fragment>
-      <Typography tag="h1" fontSize="2xl" textAlign="center">
+      <Typography tag="h1" fontSize="xl" textAlign="center">
         Login
       </Typography>
 

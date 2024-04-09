@@ -22,8 +22,8 @@ const Footer = () => {
         </div>
 
         <div className="lg:col-span-5">
-          <Typography tag="h4" textColor="light" fontSize="2xl" weight="md">
-            Be the first to hear about the latest offers.
+          <Typography tag="h4" textColor="light" fontSize="xl">
+            Be the first to hear about the latest offers
           </Typography>
 
           <form className="grid lg:grid-cols-5 lg:gap-[3rem]">

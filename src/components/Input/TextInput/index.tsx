@@ -1,16 +1,16 @@
 "use client";
 
 import cn from "classnames";
+import { InheritedTypographyProps } from "component";
 import React from "react";
 
 import Button from "@/components/Button";
 import { CloseEyeIcon, OpenEyeIcon } from "@/components/Icons";
-import { TypographyProps } from "@/components/Typography";
 
 import styles from "./styles.module.scss";
 
 // prettier-ignore
-type InputProps = React.InputHTMLAttributes<HTMLInputElement> & Omit<TypographyProps, "italic" | "underline" | "tag" | "noWrap"> & {
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & InheritedTypographyProps & {
     type?: "text" | "email" | "number" | "date" | "datetime-local" | "hidden";
     sizeElement?: "sm" | "base" | "md" | "lg";
     width?: "full" | "auto";
